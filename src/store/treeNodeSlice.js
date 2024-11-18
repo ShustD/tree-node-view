@@ -29,7 +29,7 @@ export const deleteNode = createAsyncThunk(
   async (nodeId, { dispatch, rejectWithValue }) => {
     const treeName = 'myProjectTree'
     try {
-      const response = await fetch(`https://test.vmarmysh.com/api.user.tree.node.delete?treeName=${treeName}&nodeId=${nodeId}`, {
+      const response = await fetch(`https://cors-anywhere.herokuapp.com/https://test.vmarmysh.com/api.user.tree.node.delete?treeName=${treeName}&nodeId=${nodeId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ export const createTreeNode = createAsyncThunk(
     const treeName = 'myProjectTree'
     
     try {
-      const response = await fetch(`https://test.vmarmysh.com/api.user.tree.node.create?treeName=${treeName}&parentNodeId=${nodeId}&nodeName=${nodeName}`, {
+      const response = await fetch(`https://cors-anywhere.herokuapp.com/https://test.vmarmysh.com/api.user.tree.node.create?treeName=${treeName}&parentNodeId=${nodeId}&nodeName=${nodeName}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ export const editTreeNode = createAsyncThunk(
     console.log('hui');
     
     try {
-      const response = await fetch(`https://test.vmarmysh.com/api.user.tree.node.rename?treeName=${treeName}&nodeId=${nodeId}&newNodeName=${newNodeName}`, {
+      const response = await fetch(`https://cors-anywhere.herokuapp.com/https://test.vmarmysh.com/api.user.tree.node.rename?treeName=${treeName}&nodeId=${nodeId}&newNodeName=${newNodeName}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
